@@ -49,7 +49,8 @@ class TimeSliced(object):
 
     def hours_difference(self, date1, date2):
         delta = date2 - date1
-        return int(math.floor(delta.total_seconds() / 3600))
+        total_seconds = delta.days * 3600 * 24 + delta.seconds
+        return int(math.floor(total_seconds / 3600))
 
     def minutes_difference(self, date1, date2):
         delta = date2 - date1
