@@ -2,6 +2,10 @@ OWA_URL = 'http://cardstories.org/owa'
 OWA_API_KEY = 'xxxxx'
 OWA_SITE_ID = 'xxxxx'
 
-WS_LOG_PATH = './log/cardstories.org_twisted.log' # .1, .2, etc. gets automatically added
-JSON_OUTPUT_PATH = './static/data/cardstories_stats.json' # Should be where you put your static files
+BASE_PATH = '/var/www/stats.cardstories.org/'
+EMAIL2ID_JSON_PATH = BASE_PATH + 'raw/email2id.json'
+NAME2ID_JSON_PATH = BASE_PATH + 'raw/name2id.json'
+
+WS_LOG_PATH = '/var/www/log/cardstories.org_twisted.log' # .1, .2, etc. gets automatically added
+JSON_OUTPUT_PATH = BASE_PATH + 'static/data/cardstories_stats.json' # Should be where you put your static files
 

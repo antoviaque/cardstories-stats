@@ -120,9 +120,9 @@ class ActionSet(object):
 
     def __init__(self, start_date):
         # Caches of emails and name resolution
-        with open('raw/email2id.json') as f:
+        with open(EMAIL2ID_JSON_PATH) as f:
             self.email2id = json.load(f)
-        with open('raw/name2id.json') as f:
+        with open(NAME2ID_JSON_PATH) as f:
             self.name2id = json.load(f)
 
         self.start_date = start_date
