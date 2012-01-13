@@ -54,7 +54,8 @@ class TimeSliced(object):
 
     def minutes_difference(self, date1, date2):
         delta = date2 - date1
-        return int(math.floor(delta.total_seconds() / 60))
+        total_seconds = delta.days * 3600 * 24 + delta.seconds
+        return int(math.floor(total_seconds / 60))
 
     def get_week_nb_from_date(self, date):
         return self.weeks_difference(self.start_date, date)
