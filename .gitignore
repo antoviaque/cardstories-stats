@@ -1,0 +1,6 @@
+raw
+log
+*.pyc
+*~
+settings.py
+static/data/cardstories_stats.json

@@ -1,0 +1,7 @@
+OWA_URL = 'http://cardstories.org/owa'
+OWA_API_KEY = 'xxxxx'
+OWA_SITE_ID = 'xxxxx'
+
+WS_LOG_PATH = './log/cardstories.org_twisted.log' # .1, .2, etc. gets automatically added
+JSON_OUTPUT_PATH = './static/data/cardstories_stats.json' # Should be where you put your static files
+

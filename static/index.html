@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Card Stories - Statistics</title>
+    <link href="css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/dist/tablesorter/style.css" rel="stylesheet" type="text/css">
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/dist/excanvas.min.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="js/dist/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/dist/jquery.flot.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/dist/jquery.flot.crosshair.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/dist/jquery.flot.selection.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/dist/jquery.tablesorter.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.cardstories.stats.js"></script>
+</head>
+<body>
+    <h1>Card Stories - Usage Statistics</h1>
+    
+    <h2>Table of contents</h2>
+    
+    <ol>
+        <li><a href="#concurrent-players">Concurrent players</a></li>
+        <li><a href="#active-players-per-week">Active players per week</a></li>
+        <li><a href="#funnel">Funnel</a></li>
+        <li><a href="#cohorts">Cohorts</a></li>
+        <li><a href="#enough-players">Enough players?</a></li>
+    </ol>
+    
+    <a name="concurrent-players"></a>
+    <h2>Concurrent players</h2>
+
+    <div id="plot_concurrent_players" style="width: 95%; height: 450px;"></div>
+
+    <p>Shows the number of active players at a given time (each player making at least one call to 
+    the webservice during any given minute).</p>
+    
+    <p><em>Tip: Select an area to zoom.</em> <button id="reset_concurrent_players">Reset zoom</button></p>
+        
+    <br /><br /><hr />
+
+    <a name="active-players-per-week"></a>
+    <h2>Active players per week</h2>
+
+    <div id="plot_active_players_per_week" style="width: 95%; height: 450px;"></div>
+
+    <p>Shows the number of active players per week, along with the proportion of new players (who 
+    registered during the current week) and recurring players (who registered before the current week).</p>
+        
+    <table id="table_active_players_per_week" class="tablesorter"> 
+        <thead> 
+            <tr> 
+                <th>Type</th> 
+            </tr> 
+        </thead> 
+        <tbody></tbody>
+    </table>
+    
+    <br /><br /><hr />
+
+    <a name="funnel"></a>
+    <h2>Funnel</h2>
+
+    <div id="plot_funnel" style="width: 95%; height: 450px;"></div>
+
+    <p>Shows the percentage of new visitors who successfully go through each of these steps:</p>
+    <ol>
+        <li>% of new visitors who register</li>
+        <li>% of previous step passing the loading screen</li>
+        <li>% of previous step creating a story</li>
+        <li>% of previous step moving a game to the vote phase themselves</li>
+        <li>% of previous step moving a game to the result phase themselves</li>
+        <li>% of previous step joining or creating another game</li>
+        <li>% of previous step coming back at least once to the game, on the next day or later</li>
+        <li>Total (% of new visitors who go through all the steps in the right order)</li>
+    </ol>
+        
+    <table id="table_funnel" class="tablesorter"> 
+        <thead> 
+            <tr> 
+                <th>Cohort</th> 
+            </tr> 
+        </thead> 
+        <tbody></tbody>
+    </table>
+
+    <br /><br /><hr />
+
+    <a name="cohorts"></a>
+    <h2>Cohorts</h2>
+
+    <div id="plot_weekly_actives_percent" style="width: 95%; height: 450px;"></div>
+
+    <p>Shows the percentage of players still playing after 1, 2, 3 weeks... There is one cohort per week 
+    (if you register on week 1, you're in cohort 1).</p>
+        
+    <table id="table_weekly_actives_percent" class="tablesorter"> 
+        <thead> 
+			<tr> 
+			    <th>Cohort date</th> 
+			</tr> 
+		</thead> 
+		<tbody></tbody>
+    </table>
+
+    <br /><br /><hr />
+
+    <a name="enough-players"></a>
+    <h2>Enough players?</h2>
+
+    <div id="plot_enough_players_percent" style="width: 95%; height: 450px;"></div>
+
+    <p>Shows the proportion of time where there are 3 or more players in the game.
+    It serves to highlight when players find themselves without enough human opponents. 
+    The bots aren't counted as players.</p>
+    
+    <p><em>Tip: Select an area to zoom.</em> <button id="reset_enough_players_percent">Reset zoom</button></p>
+        
+</body>
+</html>
